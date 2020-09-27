@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+PKGmG = input('What is your PkgMG?\nPKGnm: ')
+from os import *
+if PKGmG=="apt" :
+    print("Yor base is Debian")
+    CMD_apt_update = "sudo apt update"
+    CMD_apt_install = "sudo apt install flashplugin-installer"
+    system(CMD_apt_update)
+    system(CMD_apt_install)
+else:
+    A = 0
+if PKGmG=="dnf" :
+    print("yor base is REDHAT(Fedora)")
+    CMD_dnf = "sudo dnf install flashplugin-installer"
+    system(CMD_dnf)
+else:
+    print
+if PKGmG=="pacman":
+    print("your base is Arch Linux")
+    CMD_pacman_update = "sudo pacman -Sy"
+    CMD_pacman_install = "sudo pacman -S flashplugin-installer"
+    system(CMD_pacman_update)
+    system(CMD_pacman_install)
